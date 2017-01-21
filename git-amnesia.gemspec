@@ -3,14 +3,16 @@ lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'forgetful-git/amnesia/version'
 
+GEM_VERSION = Amnesia::VERSION
+
 Gem::Specification.new do |spec|
     spec.name        = 'git-amnesia'
-    spec.version     = Amnesia::VERSION
+    spec.version     = GEM_VERSION
     spec.authors     = ['Armin Grodon']
     spec.email       = ['me@armingrodon.de']
 
-    spec.summary     = ""
-    spec.description = ""
+    spec.summary     = "A tool to help you recover from your post-weekend amnesia"
+    spec.description = "Let someone else remember what you commited"
     spec.homepage    = 'https://github.com/x4121/git-amnesia'
 
     spec.executables = 'git-amnesia'

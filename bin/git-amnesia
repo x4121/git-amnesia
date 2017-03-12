@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
 
-require 'forgetful-git/amnesia'
+require 'git-amnesia'
 
-Amnesia.run
+GitAmnesia.run ARGV

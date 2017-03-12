@@ -1,9 +1,9 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'forgetful-git/amnesia/version'
+require 'git-amnesia/version'
 
-GEM_VERSION = Amnesia::VERSION
+GEM_VERSION = GitAmnesia::VERSION
 
 Gem::Specification.new do |spec|
     spec.name        = 'git-amnesia'
@@ -16,16 +16,16 @@ Gem::Specification.new do |spec|
     spec.homepage    = 'https://github.com/x4121/git-amnesia'
 
     spec.executables = 'git-amnesia'
-    spec.date        = '2017-01-20'
+    spec.date        = '2017-03-12'
     spec.extra_rdoc_files = ['README.md']
     spec.files       = [
         "LICENSE",
         "README.md",
-        "lib/forgetful-git/amnesia.rb",
-        "lib/forgetful-git/amnesia/version.rb",
-        "lib/forgetful-git/common/git.rb",
-        "lib/forgetful-git/common/string.rb",
-        "lib/forgetful-git/common/log.rb"
+        "lib/git-amnesia.rb",
+        "lib/git-amnesia/version.rb",
+        "lib/git-amnesia/git.rb",
+        "lib/git-amnesia/string.rb",
+        "lib/git-amnesia/log.rb"
     ]
     spec.required_ruby_version = '>= 1.9'
     spec.add_development_dependency 'rake'

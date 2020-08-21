@@ -40,7 +40,7 @@ class Git
         repos.each do |repo|
         cmd = "cd '#{repo}' 2>/dev/null" +
             " && git log --max-count=#{Git.amnesia_max} --author='#{Git.author_name}'" +
-            " --pretty=format:'%at::#{repo.basename}::%s' 2>/dev/null"
+            " --all --pretty=format:'%at::#{repo.basename}::%s' 2>/dev/null"
             log = `#{cmd}`
             if $?.exitstatus == 0
                 logs += log.explode.map { |l| Log.new(l) }
